@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blocos</title>
+
+    <style>
+
+        body{
+            background-image: linear-gradient(to right,rgb(93, 93, 177),rgb(240, 161, 161),rgb(194, 194, 100));
+        }
+
+        div.cubo{
+            text-align: center;
+            border: 3px solid black;
+            border-radius: 30px;
+            width:1000px;
+            height: 500px;
+            margin-top: 75px;
+            margin-left: 150px;
+        }
+
+        div.quadrado {
+            display: inline-block;
+            border: 2px solid black;
+            width: 300px;
+            height: 300px;
+            background-color: gray;
+            border-radius: 10px;
+            margin: auto;
+            margin-top: 90px;
+        }
+
+        div#q1{
+            background-color: skyblue;
+        }
+
+        div#q2 {
+            background-image: linear-gradient(to bottom, yellow,red);
+        }
+
+        div#q3 {
+            background-image:url('imagens/pattern003.png');
+        }
+
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        header{
+            width: 100%;
+            height: 150px;
+        }
+
+        section{
+            width: 100%;
+            height: 150px;
+            position: relative;
+        }
+
+        div.setaBaixo{
+            width: 40px;
+            height: 40px;
+            background-image: url('imagens/setaDown.png');
+            background-size: contain;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            animation-name: setaBaixo;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes setaBaixo{
+            0%{
+                top: 0px;
+            }
+            100%{
+                top: 20px;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: o;
+            box-sizing: border-box;
+        }
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .btn{
+            display: flex;
+            position: relative;
+            width: 150px;
+            height: 55px;
+            border-radius: 7px;
+            overflow: hidden;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn::before{
+            content: "";
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: conic-gradient(#121212,white);
+            animation: efeito 1.3s ease infinite;
+            transition: 1s ease;
+        }
+
+        @keyframes efeito {
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+
+        .container:hover .btn::before {
+            background: #595959;
+        }
+
+        a {
+            position: absolute;
+            z-index: 1;
+            display: block;
+            width: 147px;
+            height: 52px;
+            background: #121212;
+            text-align: center;
+            line-height: 52px;
+            border-radius: 6px;
+            text-decoration: none;
+            color: #fff;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="cubo">
+        <div class="quadrado" id="q1"></div>
+        <div class="quadrado"  id="q2"></div>
+        <div class="quadrado"  id="q3"></div>
+    </div>
+
+    <header>
+        <section>
+
+        <div class="setaBaixo"></div>
+        <div class="container">
+            <div class="btn">
+                <a href="#">Clique Aqui &#x1F601;</a>
+            </div>
+        </div>
+
+    </section>
+   
+    </header>
+</body>
+</html>
