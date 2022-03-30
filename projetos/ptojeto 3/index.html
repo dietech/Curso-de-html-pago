@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(to left,rgb(0,30,50), rgb(90,30,0));
+        }
+        .box{
+            color: white;
+            position: absolute;
+            background-color: rgb(0, 0, 0.9);
+            padding: px;
+            border-radius: 15px;
+            width: auto;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        fieldset{
+            border: 1px solid dodgerblue;
+            border-radius:15px;
+            color:white;
+        }
+        legend {
+            border: 1px solid rgb(200, 40, 0.9);
+            padding: px;
+            text-align: center;
+            background-color: dodgerblue;
+            border-radius: 20px;
+        }
+        .inputbox{
+            position: relative;
+        }
+        .inputusuario {
+            background: none;
+            border: none;
+            border-bottom: 1px solid white;
+            outline: none;
+            color: aliceblue;
+            font-size: 12px;
+            width: 100%;
+            letter-spacing: 2px;
+        }
+        .labelinput {
+            position: absolute;
+            top: 0px;
+            pointer-events: none;
+            transition: 0.5s;
+        }
+        .inputusuario:focus ~ .labelinput, .inputusuario:valid ~ .labelinput {
+            top: -20px;
+            font-size: 10px; 
+            color: dodgerblue;
+        }
+        #submit{
+            background-image: linear-gradient(to right, rgb( 200,30,08), rgb(80,0,0.5));
+            width: 100%;
+            border: none;
+            padding: 15px;
+            color: wheat;
+            font-size: 15px;
+            cursor: pointer;
+            border-radius: 15px;
+        }
+        #submit:hover {
+            background-color: linear-gradient(to right, rgb(0, 80,172), rgb(80   , 19, 195));;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <fieldset><legend><p>Formulario</p></legend>
+        <div class="inputbox">
+            <input type="text" name="nome" id="nome" class="inputusuario" required>
+            <label for="nome" class="labelinput" >Nome</label>
+        </div>
+        <br>
+        <div class="inputbox">
+            <input type="text" name="profissao" id="profissao" class="inputusuario" required>
+            <label for="profissao" class="labelinput" >Profissão</label>
+        </div>
+        <br>
+        <div class="inputbox">
+            <input type="text" name="telefone" id="telefone" class="inputusuario" required>
+            <label for="telefone" class="labelinput" >Telefone</label>
+        </div>
+        <br><br>
+        <input type="submit" name="submit" id="submit">
+        </fieldset>
+        
+    </div>
+</body>
+</html>
