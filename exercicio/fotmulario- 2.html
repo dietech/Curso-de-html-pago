@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <h3>Cadastro da liga dos astronautas</h3>
+    <div>
+        <label for="name">Nome:</label>
+        <input type="text" name="name" id="name">
+    </div><br>
+    <div>
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email"> -
+        <label for="pas">Password:</label>
+        <input type="text" name="pas" id="pas">
+    </div><br>
+
+    <div>
+        <label for="date">Data de nascimento:</label>
+        <input type="date"> - 
+        <label for="foto">Foto</label>
+        <input type="file">
+    </div><br>
+
+    <div>
+        <label for="nasc">Nacionalidade:</label>
+        <select name="nasc" id="nasc">
+            <option value="russian">Russia</option>
+            <option value="american">Americana</option>
+            <option value="brazilian">Brasileira</option> 
+        </select> -
+        Genero:
+         <label for="feminino">F</label>
+         <input type="radio" name="feminino" id="feminino">
+         <label for="masculino">M</label>
+         <input type="radio" name="masculino" id="masculino">
+    </div> <br>
+    Suas principais qualidades: <br>
+    <label for="int">Inteligência</label>
+    <input type="checkbox" name="int" id="int"> |
+    <label for="res">Resiliência</label>
+    <input type="checkbox" name="res" id="res"> |
+    <label for="pre">Preparo físico</label>
+    <input type="checkbox" name="pre" id="pre"> |
+    <label for="edu">Educação</label>
+    <input type="checkbox" name="edu" id="edu"> 
+    <div></div>
+    <br>
+    <div>
+        <textarea name="Descricao" id="Descricao" cols="30" rows="10"></textarea>
+    </div>
+    <input type="submit" value="Criar">
+</body>
+</html>
