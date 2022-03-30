@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+body{
+    background-color: rgb(19, 11, 1);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    text-align: justify;
+}
+a:link, a:active, a:visited {
+    color: #315e8a;
+    text-decoration: none;
+}
